@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Postulación Talento Up · Auxiliar Administrativo</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ── ROOT VARIABLES ───────────────────────── */
+:root {
+  --green:   #00b86a;
+  --green-d: #009257;
+  --blue:    #0070ee;
+  --blue-d:  #0057b8;
+  --teal:    #00c5a0;
+  --bg:      #f0f6ff;
+  --surface: #ffffff;
+  --text:    #0d1f35;
+  --muted:   #5a7490;
+  --border:  #c8ddf5;
+  --error:   #d93025;
+  --success: #1a9e5c;
+  --radius:  14px;
+  --shadow:  0 4px 24px rgba(0,80,200,.09);
+}
+
+/* ── RESET ───────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* skip-to-content for screen readers */
+.skip-link {
+  position: absolute; top: -40px; left: 0;
+  background: var(--blue); color: #fff;
+  padding: 8px 16px; font-weight: 700; border-radius: 0 0 8px 0;
+  transition: top .2s; z-index: 9999; text-decoration: none;
+}
+.skip-link:focus { top: 0; }
+
+/* ── HEADER HERO ─────────────────────────── */
+.hero {
+  background: linear-gradient(135deg, #0a2540 0%, #0d3b2e 100%);
+  padding: 40px 24px 60px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: radial-gradient(rgba(255,255,255,.06) 1px, transparent 1px);
+  background-size: 26px 26px;
+}
+.hero-logos {
+  display: flex; align-items: center; justify-content: center;
+  gap: 20px; margin-bottom: 28px; position: relative; z-index: 1;
+  flex-wrap: wrap;
+}
+.hero-logos img {
+  height: 44px; object-fit: contain;
+}
+.logo-talento { filter: brightness(0) invert(1); }
+.logo-rc { background: rgba(255,255,255,.92); border-radius: 10px; padding: 6px 14px; }
+.logo-divider { width: 1px; height: 36px; background: rgba(255,255,255,.25); }
+
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: rgba(0,200,120,.18); border: 1px solid rgba(0,200,120,.4);
+  color: #00e0a0; border-radius: 30px; padding: 4px 14px;
+  font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+  margin-bottom: 16px; position: relative; z-index: 1;
+}
+.hero h1 {
+  font-family: 'Nunito', sans-serif;
+  font-size: clamp(22px, 5vw, 32px);
+  font-weight: 900; color: #fff;
+  line-height: 1.2; margin-bottom: 10px;
+  position: relative; z-index: 1;
+}
+.hero h1 span { color: #00e0a0; }
+.hero p {
+  color: rgba(255,255,255,.7); font-size: 14px;
+  max-width: 520px; margin: 0 auto;
+  position: relative; z-index: 1;
+}
+
+/* Progress bar */
+.progress-wrap {
+  background: rgba(255,255,255,.1); border-radius: 30px;
+  height: 6px; max-width: 340px; margin: 24px auto 0;
+  position: relative; z-index: 1; overflow: hidden;
+}
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--green), var(--teal));
+  border-radius: 30px;
+  transition: width .5s ease;
+  width: 0%;
+}
+.progress-label {
+  color: rgba(255,255,255,.55); font-size: 11px; text-align: center;
+  margin-top: 6px; position: relative; z-index: 1;
+}
+
+/* ── MAIN LAYOUT ─────────────────────────── */
+main {
+  max-width: 680px; margin: -32px auto 60px;
+  padding: 0 16px;
+}
+
+/* ── FORM CARD ───────────────────────────── */
+.form-card {
+  background: var(--surface);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+/* ── SECTIONS ────────────────────────────── */
+.section {
+  padding: 28px 32px;
+  border-bottom: 1px solid var(--border);
+  animation: fadeUp .4s ease both;
+}
+.section:last-of-type { border-bottom: none; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.section-header {
+  display: flex; align-items: center; gap: 12px;
+  margin-bottom: 22px;
+}
+.section-icon {
+  width: 40px; height: 40px; flex-shrink: 0;
+  background: linear-gradient(135deg, var(--green), var(--blue));
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px;
+}
+.section-title {
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px; font-weight: 800; color: var(--text);
+}
+.section-sub { font-size: 12px; color: var(--muted); margin-top: 1px; }
+
+/* ── FIELD GROUPS ────────────────────────── */
+.field-row {
+  display: grid;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.field-row.cols-2 { grid-template-columns: 1fr 1fr; }
+.field-row.cols-1 { grid-template-columns: 1fr; }
+
+@media (max-width: 540px) {
+  .field-row.cols-2 { grid-template-columns: 1fr; }
+  .section { padding: 22px 18px; }
+}
+
+/* ── FIELD ───────────────────────────────── */
+.field { display: flex; flex-direction: column; gap: 6px; }
+
+label {
+  font-size: 13px; font-weight: 600; color: var(--text);
+  display: flex; align-items: center; gap: 4px;
+}
+label .req { color: var(--error); font-size: 14px; line-height: 1; }
+label .hint-icon {
+  width: 16px; height: 16px;
+  background: var(--border); border-radius: 50%;
+  font-size: 10px; color: var(--muted); cursor: help;
+  display: inline-flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 14px; font-family: 'DM Sans', sans-serif;
+  color: var(--text); background: #f7faff;
+  transition: border-color .2s, box-shadow .2s, background .2s;
+  outline: none;
+  -webkit-appearance: none;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: var(--blue);
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(0,112,238,.12);
+}
+input.error, select.error, textarea.error {
+  border-color: var(--error);
+  box-shadow: 0 0 0 3px rgba(217,48,37,.1);
+}
+input.valid, select.valid, textarea.valid {
+  border-color: var(--success);
+}
+
+select { cursor: pointer; }
+textarea { resize: vertical; min-height: 80px; }
+
+.field-error {
+  font-size: 11.5px; color: var(--error);
+  display: none; align-items: center; gap: 4px;
+}
+.field-error.show { display: flex; }
+.field-error::before { content: '⚠'; font-size: 12px; }
+
+/* ── FILE UPLOAD ─────────────────────────── */
+.upload-zone {
+  border: 2px dashed var(--border);
+  border-radius: var(--radius);
+  padding: 22px 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color .2s, background .2s;
+  background: #f7faff;
+  position: relative;
+}
+.upload-zone:hover, .upload-zone.drag { border-color: var(--blue); background: #eef5ff; }
+.upload-zone.has-file { border-color: var(--success); background: #edfbf4; }
+.upload-zone.error-file { border-color: var(--error); background: #fff5f5; }
+
+.upload-zone input[type="file"] {
+  position: absolute; inset: 0; opacity: 0; cursor: pointer; width: 100%; height: 100%;
+}
+.upload-icon { font-size: 32px; margin-bottom: 8px; }
+.upload-title { font-weight: 700; font-size: 13px; color: var(--text); margin-bottom: 3px; }
+.upload-sub { font-size: 11.5px; color: var(--muted); }
+.upload-preview {
+  margin-top: 10px; display: none;
+  align-items: center; gap: 8px;
+  background: rgba(26,158,92,.1); border-radius: 8px;
+  padding: 8px 12px; font-size: 12px; color: var(--success); font-weight: 600;
+}
+.upload-preview.show { display: flex; }
+.upload-preview .remove-file {
+  margin-left: auto; background: none; border: none;
+  cursor: pointer; color: var(--error); font-size: 16px;
+  line-height: 1; padding: 0;
+}
+
+/* ── RADIO / TOGGLE ──────────────────────── */
+.radio-group {
+  display: flex; gap: 10px; flex-wrap: wrap;
+}
+.radio-card {
+  flex: 1; min-width: 120px;
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  cursor: pointer;
+  display: flex; align-items: center; gap: 10px;
+  transition: border-color .2s, background .2s;
+  background: #f7faff;
+  user-select: none;
+}
+.radio-card:hover { border-color: var(--blue); background: #eef5ff; }
+.radio-card input[type="radio"] {
+  width: 18px; height: 18px; flex-shrink: 0;
+  accent-color: var(--blue); cursor: pointer;
+}
+.radio-card.selected-yes { border-color: var(--error); background: #fff5f5; }
+.radio-card.selected-no  { border-color: var(--success); background: #edfbf4; }
+.radio-label { font-size: 13.5px; font-weight: 600; }
+
+/* ── ALERT BOX ───────────────────────────── */
+.alert {
+  display: flex; gap: 12px; align-items: flex-start;
+  border-radius: var(--radius); padding: 14px 16px; font-size: 13px; line-height: 1.5;
+}
+.alert.info  { background: #e8f1ff; border-left: 4px solid var(--blue); color: #0d3070; }
+.alert.warn  { background: #fff8e6; border-left: 4px solid #f5a623; color: #7a4f00; }
+.alert.success-msg { background: #e6fbf2; border-left: 4px solid var(--success); color: #0d4a2a; }
+.alert-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; }
+
+/* ── SUBMIT ──────────────────────────────── */
+.submit-section {
+  padding: 28px 32px;
+  background: linear-gradient(135deg, #f0f6ff, #e8f5f0);
+  border-top: 1px solid var(--border);
+}
+
+.consent-check {
+  display: flex; gap: 10px; align-items: flex-start;
+  margin-bottom: 20px;
+}
+.consent-check input[type="checkbox"] {
+  width: 18px; height: 18px; flex-shrink: 0;
+  accent-color: var(--blue); cursor: pointer; margin-top: 2px;
+}
+.consent-text { font-size: 12.5px; color: var(--muted); line-height: 1.5; }
+.consent-text a { color: var(--blue); }
+
+.btn-submit {
+  width: 100%;
+  background: linear-gradient(135deg, var(--green), var(--blue));
+  color: #fff; border: none;
+  border-radius: var(--radius);
+  padding: 16px 24px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px; font-weight: 800;
+  cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px;
+  transition: opacity .2s, transform .15s;
+  box-shadow: 0 6px 20px rgba(0,112,238,.25);
+}
+.btn-submit:hover:not(:disabled) { opacity: .92; transform: translateY(-1px); }
+.btn-submit:active:not(:disabled) { transform: translateY(0); }
+.btn-submit:disabled { opacity: .55; cursor: not-allowed; }
+.btn-submit .spinner {
+  width: 18px; height: 18px; border: 2px solid rgba(255,255,255,.4);
+  border-top-color: #fff; border-radius: 50%;
+  animation: spin .7s linear infinite; display: none;
+}
+.btn-submit.loading .spinner { display: block; }
+.btn-submit.loading .btn-text { display: none; }
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ── SUCCESS SCREEN ──────────────────────── */
+#success-screen {
+  display: none;
+  padding: 60px 32px;
+  text-align: center;
+}
+#success-screen.show { display: block; }
+.success-icon { font-size: 64px; margin-bottom: 16px; }
+.success-title {
+  font-family: 'Nunito', sans-serif;
+  font-size: 24px; font-weight: 900; color: var(--text); margin-bottom: 10px;
+}
+.success-sub { font-size: 14px; color: var(--muted); max-width: 380px; margin: 0 auto 24px; }
+
+/* ── SETUP BANNER ────────────────────────── */
+#setup-banner {
+  background: linear-gradient(135deg,#fff8e6,#fff3d0);
+  border: 1.5px solid #f5a623;
+  border-radius: 16px; padding: 18px 22px;
+  margin-bottom: 16px;
+  font-size: 13px; color: #7a4f00;
+  display: flex; gap: 12px;
+}
+#setup-banner code {
+  background: rgba(0,0,0,.07); border-radius: 4px;
+  padding: 1px 6px; font-family: monospace; font-size: 12px;
+}
+
+/* ── ACCESSIBILITY HELPERS ───────────────── */
+*:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 2px;
+}
+.sr-only {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+}
+
+/* ── FOOTER ──────────────────────────────── */
+footer {
+  text-align: center; font-size: 11.5px; color: var(--muted);
+  padding: 0 16px 40px; max-width: 680px; margin: 0 auto;
+}
+</style>
+</head>
+
+<body>
+<a href="#main-form" class="skip-link">Ir al formulario</a>
+
+<!-- ── HERO ──────────────────────────────────────────── -->
+<header class="hero" role="banner">
+  <div class="hero-logos">
+    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="" class="logo-talento" style="display:none" id="img-talento">
+    <div class="logo-divider"></div>
+    <div class="logo-rc">
+      <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="" style="display:none" id="img-riopaila">
+    </div>
+    <span style="color:rgba(255,255,255,.8);font-family:'Nunito',sans-serif;font-size:18px;font-weight:900;">TalentoUp × Riopaila Castilla</span>
+  </div>
+  <div class="hero-badge">♿ Inclusión laboral 2026</div>
+  <h1>Postulación<br><span>Técnico Laboral en Auxiliar Administrativo</span></h1>
+  <p>Diligencia el formulario con tus datos personales y adjunta los documentos requeridos. Tu información estará protegida.</p>
+  <div class="progress-wrap" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Progreso del formulario">
+    <div class="progress-bar" id="progress-bar"></div>
+  </div>
+  <div class="progress-label" id="progress-label">0% completado</div>
+</header>
+
+<!-- ── MAIN ───────────────────────────────────────────── -->
+<main id="main-form">
+
+  <!-- Setup banner (oculto hasta que se configure) -->
+  <div id="setup-banner" role="alert" aria-live="polite" style="display:none">
+    <span style="font-size:22px;flex-shrink:0">⚙️</span>
+    <div>
+      <strong>Formulario en modo demostración</strong><br>
+      Para activar el envío a Google Drive, ingresa la URL de tu Apps Script en el campo
+      <code>APPS_SCRIPT_URL</code> al inicio del código JavaScript, o compártela abajo.<br>
+      <label for="script-url-input" style="margin-top:8px;display:block;font-weight:700;font-size:12px;color:#7a4f00;">
+        Pegar URL del Web App aquí:
+      </label>
+      <input id="script-url-input" type="url" placeholder="https://script.google.com/macros/s/…/exec"
+        style="margin-top:4px;width:100%;padding:8px 12px;border:1.5px solid #f5a623;border-radius:8px;font-size:12px;background:#fff;font-family:monospace;"
+        oninput="setScriptUrl(this.value)">
+    </div>
+  </div>
+
+  <div class="form-card" role="form" aria-label="Formulario de postulación Talento Up">
+
+    <!-- ── SECCIÓN 1: DATOS PERSONALES ── -->
+    <section class="section" aria-labelledby="s1-title">
+      <div class="section-header">
+        <div class="section-icon" aria-hidden="true">👤</div>
+        <div>
+          <div class="section-title" id="s1-title">Datos personales</div>
+          <div class="section-sub">Información básica del postulante</div>
+        </div>
+      </div>
+
+      <div class="field-row cols-1">
+        <div class="field">
+          <label for="nombre">Nombre completo <span class="req" aria-label="Campo obligatorio">*</span></label>
+          <input type="text" id="nombre" name="nombre" placeholder="Ej: María Alejandra García López"
+            autocomplete="name" required aria-required="true" aria-describedby="nombre-err">
+          <span class="field-error" id="nombre-err" role="alert">Ingresa tu nombre completo.</span>
+        </div>
+      </div>
+
+      <div class="field-row cols-2">
+        <div class="field">
+          <label for="tipo-id">Tipo de identificación <span class="req" aria-label="Campo obligatorio">*</span></label>
+          <select id="tipo-id" name="tipo_id" required aria-required="true" aria-describedby="tipoid-err">
+            <option value="">Selecciona…</option>
+            <option value="CC">Cédula de ciudadanía</option>
+            <option value="TI">Tarjeta de identidad</option>
+            <option value="CE">Cédula de extranjería</option>
+            <option value="PA">Pasaporte</option>
+          </select>
+          <span class="field-error" id="tipoid-err" role="alert">Selecciona el tipo de documento.</span>
+        </div>
+        <div class="field">
+          <label for="num-id">Número de identificación <span class="req" aria-label="Campo obligatorio">*</span></label>
+          <input type="text" id="num-id" name="num_id" placeholder="Sin puntos ni comas"
+            inputmode="numeric" pattern="[0-9]+" required aria-required="true" aria-describedby="numid-err">
+          <span class="field-error" id="numid-err" role="alert">Ingresa solo números, sin puntos.</span>
+        </div>
+      </div>
+
+      <div class="field-row cols-2">
+        <div class="field">
+          <label for="telefono">Número de celular <span class="req" aria-label="Campo obligatorio">*</span></label>
+          <input type="tel" id="telefono" name="telefono" placeholder="Ej: 3001234567"
+            inputmode="numeric" autocomplete="tel" required aria-required="true" aria-describedby="tel-err">
+          <span class="field-error" id="tel-err" role="alert">Ingresa un número de celular válido.</span>
+        </div>
+        <div class="field">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" placeholder="correo@ejemplo.com"
+            autocomplete="email" inputmode="email">
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SECCIÓN 2: RESIDENCIA ── -->
+    <section class="section" aria-labelledby="s2-title">
+      <div class="section-header">
+        <div class="section-icon" aria-hidden="true">📍</div>
+        <div>
+          <div class="section-title" id="s2-title">Lugar de residencia</div>
+          <div class="section-sub">Debes residir en uno de los municipios participantes</div>
+        </div>
+      </div>
+
+      <div class="field-row cols-1">
+        <div class="field">
+          <label for="municipio">Municipio de residencia <span class="req" aria-label="Campo obligatorio">*</span></label>
+          <select id="municipio" name="municipio" required aria-required="true" aria-describedby="mun-err">
+            <option value="">Selecciona tu municipio…</option>
+            <option value="Pradera">Pradera</option>
+            <option value="Florida">Florida</option>
+            <option value="Candelaria">Candelaria</option>
+            <option value="Palmira">Palmira</option>
+            <option value="Zarzal">Zarzal</option>
+            <option value="Bugalagrande">Bugalagrande</option>
+            <option value="Tulua">Tuluá</option>
+            <option value="La Paila">La Paila</option>
+          </select>
+          <span class="field-error" id="mun-err" role="alert">Selecciona tu municipio. Solo participan los municipios listados.</span>
+        </div>
+      </div>
+
+      <div class="field-row cols-1">
+        <div class="field">
+          <label for="direccion">Dirección de residencia <span class="req" aria-label="Campo obligatorio">*</span></label>
+          <input type="text" id="direccion" name="direccion"
+            placeholder="Ej: Calle 12 # 3-45, Barrio El Centro"
+            autocomplete="street-address" required aria-required="true" aria-describedby="dir-err">
+          <span class="field-error" id="dir-err" role="alert">Ingresa tu dirección completa.</span>
+        </div>
+      </div>
+
+      <div class="field-row cols-1">
+        <div class="field">
+          <label for="barrio">Barrio <span class="hint-icon" title="Opcional pero útil" aria-label="Opcional">?</span></label>
+          <input type="text" id="barrio" name="barrio" placeholder="Nombre del barrio o vereda">
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SECCIÓN 3: CONTRATO DE APRENDIZAJE ── -->
+    <section class="section" aria-labelledby="s3-title">
+      <div class="section-header">
+        <div class="section-icon" aria-hidden="true">📄</div>
+        <div>
+          <div class="section-title" id="s3-title">Contrato de aprendizaje</div>
+          <div class="section-sub">Requisito obligatorio del programa</div>
+        </div>
+      </div>
+
+      <div class="alert info" role="note" style="margin-bottom:16px;">
+        <span class="alert-icon" aria-hidden="true">ℹ️</span>
+        <span>Para participar en Talento Up, <strong>no debes haber tenido contrato de aprendizaje previo</strong>. Responde con honestidad.</span>
+      </div>
+
+      <div class="field">
+        <label id="contrato-label">¿Has tenido algún contrato de aprendizaje anteriormente? <span class="req" aria-label="Campo obligatorio">*</span></label>
+        <div class="radio-group" role="radiogroup" aria-labelledby="contrato-label" aria-describedby="contrato-err">
+          <label class="radio-card" id="card-si" for="contrato-si">
+            <input type="radio" id="contrato-si" name="contrato" value="Si" aria-describedby="contrato-err">
+            <span class="radio-label">❌ Sí he tenido</span>
+          </label>
+          <label class="radio-card" id="card-no" for="contrato-no">
+            <input type="radio" id="contrato-no" name="contrato" value="No" aria-describedby="contrato-err">
+            <span class="radio-label">✅ No he tenido</span>
+          </label>
+        </div>
+        <span class="field-error" id="contrato-err" role="alert">Debes seleccionar una opción.</span>
+      </div>
+
+      <div id="contrato-warning" style="display:none;margin-top:14px;">
+        <div class="alert warn" role="alert">
+          <span class="alert-icon" aria-hidden="true">⚠️</span>
+          <span><strong>Importante:</strong> Quienes hayan tenido un contrato de aprendizaje previo no califican para este programa. Te invitamos a consultar otras convocatorias disponibles.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SECCIÓN 4: DOCUMENTOS ── -->
+    <section class="section" aria-labelledby="s4-title">
+      <div class="section-header">
+        <div class="section-icon" aria-hidden="true">📎</div>
+        <div>
+          <div class="section-title" id="s4-title">Documentos requeridos</div>
+          <div class="section-sub">Adjunta los archivos en formato PDF, JPG o PNG (máx. 5 MB cada uno)</div>
+        </div>
+      </div>
+
+      <!-- Documento de identidad -->
+      <div class="field" style="margin-bottom:16px;">
+        <label for="doc-id">Documento de identidad <span class="req" aria-label="Campo obligatorio">*</span></label>
+        <div class="upload-zone" id="zone-id" aria-describedby="doc-id-err">
+          <input type="file" id="doc-id" name="doc_id"
+            accept=".pdf,.jpg,.jpeg,.png"
+            aria-label="Subir documento de identidad"
+            aria-required="true">
+          <div class="upload-icon" aria-hidden="true">🪪</div>
+          <div class="upload-title">Cédula o tarjeta de identidad</div>
+          <div class="upload-sub">Arrastra el archivo aquí o haz clic · PDF, JPG o PNG · máx. 5 MB</div>
+        </div>
+        <div class="upload-preview" id="prev-id" aria-live="polite">
+          <span id="prev-id-name">📄 archivo.pdf</span>
+          <button type="button" class="remove-file" aria-label="Eliminar documento de identidad" onclick="clearFile('doc-id','prev-id','zone-id')">✕</button>
+        </div>
+        <span class="field-error" id="doc-id-err" role="alert">Adjunta tu documento de identidad.</span>
+      </div>
+
+      <!-- Certificado de discapacidad -->
+      <div class="field">
+        <label for="doc-disc">Certificado de discapacidad <span class="req" aria-label="Campo obligatorio">*</span></label>
+        <div class="upload-zone" id="zone-disc" aria-describedby="doc-disc-err">
+          <input type="file" id="doc-disc" name="doc_discapacidad"
+            accept=".pdf,.jpg,.jpeg,.png"
+            aria-label="Subir certificado de discapacidad"
+            aria-required="true">
+          <div class="upload-icon" aria-hidden="true">📋</div>
+          <div class="upload-title">Certificado de discapacidad</div>
+          <div class="upload-sub">Emitido por una entidad de salud autorizada · PDF, JPG o PNG · máx. 5 MB</div>
+        </div>
+        <div class="upload-preview" id="prev-disc" aria-live="polite">
+          <span id="prev-disc-name">📄 archivo.pdf</span>
+          <button type="button" class="remove-file" aria-label="Eliminar certificado de discapacidad" onclick="clearFile('doc-disc','prev-disc','zone-disc')">✕</button>
+        </div>
+        <span class="field-error" id="doc-disc-err" role="alert">Adjunta el certificado de discapacidad.</span>
+      </div>
+
+      <div class="alert info" role="note" style="margin-top:16px;">
+        <span class="alert-icon" aria-hidden="true">🔒</span>
+        <span>Tus documentos se almacenan de forma segura en Google Drive y solo son accesibles por el equipo de Talento Up.</span>
+      </div>
+    </section>
+
+    <!-- ── SUBMIT ── -->
+    <div class="submit-section">
+      <label class="consent-check">
+        <input type="checkbox" id="consent" aria-required="true" aria-describedby="consent-err">
+        <span class="consent-text">
+          Autorizo el tratamiento de mis datos personales de acuerdo con la
+          <a href="#" aria-label="Ver política de privacidad">Política de Privacidad de Datos</a>
+          y confirmo que la información suministrada es verídica.
+        </span>
+      </label>
+      <span class="field-error" id="consent-err" role="alert" style="margin-bottom:12px;">Debes aceptar la autorización para continuar.</span>
+
+      <button type="button" class="btn-submit" id="btn-submit" onclick="submitForm()" aria-label="Enviar formulario de postulación">
+        <span class="spinner" aria-hidden="true"></span>
+        <span class="btn-text">🚀 Enviar postulación</span>
+      </button>
+    </div>
+
+    <!-- Success screen -->
+    <div id="success-screen" aria-live="polite" role="status">
+      <div class="success-icon" aria-hidden="true">🎉</div>
+      <div class="success-title">¡Postulación enviada!</div>
+      <div class="success-sub">Recibimos tu información. El equipo de Talento Up te contactará en los próximos días para confirmar tu participación.</div>
+      <div class="alert success-msg" style="text-align:left;margin-top:20px;">
+        <span class="alert-icon" aria-hidden="true">📧</span>
+        <span>Revisa tu correo electrónico (incluyendo la carpeta de spam) para confirmar la recepción de tu postulación.</span>
+      </div>
+    </div>
+
+  </div><!-- /form-card -->
+</main>
+
+<footer>
+  <p>Proyecto Talento Up · En alianza con Grupo Agroindustrial Riopaila Castilla · Compromiso desde 1918</p>
+  <p style="margin-top:4px;">Tus datos están protegidos · Uso exclusivo del proceso de selección</p>
+</footer>
+
+<!-- ════════════════════════ JAVASCRIPT ════════════════════════ -->
+<script>
+/* ──────────────────────────────────────────────────────
+   CONFIGURACIÓN — Pega aquí la URL de tu Apps Script Web App
+   ────────────────────────────────────────────────────── */
+let APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxxoGE4p7_9Df32bo4-wUZoQ0RxAxZzvMzFQ8cjp41E-exbJ4h1RwCJwpbSYbzLF6Wr0A/exec';
+
+function setScriptUrl(val) {
+  APPS_SCRIPT_URL = val.trim();
+  if (APPS_SCRIPT_URL) {
+    document.getElementById('setup-banner').style.display = 'none';
+  }
+}
+
+/* ── PROGRESS ── */
+const progressFields = [
+  'nombre','tipo-id','num-id','telefono','municipio',
+  'direccion','doc-id','doc-disc'
+];
+
+function updateProgress() {
+  let filled = 0;
+  progressFields.forEach(id => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    if (el.type === 'file') { if (el.files && el.files.length) filled++; }
+    else if (el.value.trim()) filled++;
+  });
+  const pct = Math.round((filled / progressFields.length) * 100);
+  document.getElementById('progress-bar').style.width = pct + '%';
+  document.getElementById('progress-label').textContent = pct + '% completado';
+  document.querySelector('.progress-wrap').setAttribute('aria-valuenow', pct);
+}
+
+/* ── FILE UPLOAD UI ── */
+function setupUpload(inputId, previewId, zoneId) {
+  const input = document.getElementById(inputId);
+  const preview = document.getElementById(previewId);
+  const zone = document.getElementById(zoneId);
+  const nameSpan = document.getElementById(previewId + '-name');
+
+  input.addEventListener('change', () => handleFile(input, preview, zone, nameSpan));
+
+  zone.addEventListener('dragover', e => { e.preventDefault(); zone.classList.add('drag'); });
+  zone.addEventListener('dragleave', () => zone.classList.remove('drag'));
+  zone.addEventListener('drop', e => {
+    e.preventDefault(); zone.classList.remove('drag');
+    if (e.dataTransfer.files.length) {
+      const dt = new DataTransfer();
+      dt.items.add(e.dataTransfer.files[0]);
+      input.files = dt.files;
+      handleFile(input, preview, zone, nameSpan);
+    }
+  });
+}
+
+function handleFile(input, preview, zone, nameSpan) {
+  const file = input.files[0];
+  if (!file) return;
+  if (file.size > 5 * 1024 * 1024) {
+    zone.classList.add('error-file');
+    showError(input.id + '-err', 'El archivo supera los 5 MB permitidos.');
+    return;
+  }
+  zone.classList.remove('error-file');
+  zone.classList.add('has-file');
+  hideError(input.id + '-err');
+  nameSpan.textContent = '📄 ' + file.name;
+  preview.classList.add('show');
+  updateProgress();
+}
+
+function clearFile(inputId, previewId, zoneId) {
+  document.getElementById(inputId).value = '';
+  document.getElementById(previewId).classList.remove('show');
+  document.getElementById(zoneId).classList.remove('has-file','error-file');
+  updateProgress();
+}
+
+/* ── RADIO CARDS ── */
+document.querySelectorAll('input[name="contrato"]').forEach(radio => {
+  radio.addEventListener('change', () => {
+    document.getElementById('card-si').classList.remove('selected-yes');
+    document.getElementById('card-no').classList.remove('selected-no');
+    if (radio.value === 'Si') {
+      document.getElementById('card-si').classList.add('selected-yes');
+      document.getElementById('contrato-warning').style.display = 'block';
+    } else {
+      document.getElementById('card-no').classList.add('selected-no');
+      document.getElementById('contrato-warning').style.display = 'none';
+    }
+    hideError('contrato-err');
+  });
+});
+
+/* ── VALIDATION ── */
+function showError(id, msg) {
+  const el = document.getElementById(id);
+  if (el) { el.textContent = (msg || el.textContent); el.classList.add('show'); }
+}
+function hideError(id) {
+  const el = document.getElementById(id);
+  if (el) el.classList.remove('show');
+}
+
+function validateForm() {
+  let valid = true;
+
+  const nombre = document.getElementById('nombre');
+  if (!nombre.value.trim() || nombre.value.trim().split(' ').length < 2) {
+    showError('nombre-err', 'Ingresa tu nombre completo (nombre y apellido).'); valid = false;
+  } else hideError('nombre-err');
+
+  const tipoId = document.getElementById('tipo-id');
+  if (!tipoId.value) { showError('tipoid-err'); valid = false; } else hideError('tipoid-err');
+
+  const numId = document.getElementById('num-id');
+  if (!numId.value.trim() || !/^\d{5,12}$/.test(numId.value.trim())) {
+    showError('numid-err', 'Ingresa un número de identificación válido (5-12 dígitos).'); valid = false;
+  } else hideError('numid-err');
+
+  const tel = document.getElementById('telefono');
+  if (!tel.value.trim() || !/^\d{7,15}$/.test(tel.value.replace(/\s/g,''))) {
+    showError('tel-err', 'Ingresa un número de celular válido.'); valid = false;
+  } else hideError('tel-err');
+
+  const mun = document.getElementById('municipio');
+  if (!mun.value) { showError('mun-err'); valid = false; } else hideError('mun-err');
+
+  const dir = document.getElementById('direccion');
+  if (!dir.value.trim()) { showError('dir-err'); valid = false; } else hideError('dir-err');
+
+  const contrato = document.querySelector('input[name="contrato"]:checked');
+  if (!contrato) { showError('contrato-err'); valid = false; } else hideError('contrato-err');
+
+  const docId = document.getElementById('doc-id');
+  if (!docId.files.length) { showError('doc-id-err'); valid = false; } else hideError('doc-id-err');
+
+  const docDisc = document.getElementById('doc-disc');
+  if (!docDisc.files.length) { showError('doc-disc-err'); valid = false; } else hideError('doc-disc-err');
+
+  const consent = document.getElementById('consent');
+  if (!consent.checked) { showError('consent-err'); valid = false; } else hideError('consent-err');
+
+  return valid;
+}
+
+/* ── FILE TO BASE64 ── */
+function fileToBase64(file) {
+  return new Promise((res, rej) => {
+    const reader = new FileReader();
+    reader.onload = () => res(reader.result.split(',')[1]);
+    reader.onerror = () => rej(new Error('Error al leer el archivo.'));
+    reader.readAsDataURL(file);
+  });
+}
+
+/* ── SUBMIT ── */
+async function submitForm() {
+  if (!validateForm()) {
+    // Scroll to first error
+    const firstErr = document.querySelector('.field-error.show');
+    if (firstErr) firstErr.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    return;
+  }
+
+  const btn = document.getElementById('btn-submit');
+  btn.classList.add('loading'); btn.disabled = true;
+
+  try {
+    // Collect data
+    const payload = {
+      nombre:    document.getElementById('nombre').value.trim(),
+      tipo_id:   document.getElementById('tipo-id').value,
+      num_id:    document.getElementById('num-id').value.trim(),
+      telefono:  document.getElementById('telefono').value.trim(),
+      email:     document.getElementById('email').value.trim(),
+      municipio: document.getElementById('municipio').value,
+      direccion: document.getElementById('direccion').value.trim(),
+      barrio:    document.getElementById('barrio').value.trim(),
+      contrato:  document.querySelector('input[name="contrato"]:checked').value,
+      timestamp: new Date().toLocaleString('es-CO', { timeZone: 'America/Bogota' })
+    };
+
+    // Encode files
+    const docId   = document.getElementById('doc-id').files[0];
+    const docDisc = document.getElementById('doc-disc').files[0];
+
+    payload.doc_id_nombre = docId.name;
+    payload.doc_id_tipo   = docId.type;
+    payload.doc_id_b64    = await fileToBase64(docId);
+
+    payload.doc_disc_nombre = docDisc.name;
+    payload.doc_disc_tipo   = docDisc.type;
+    payload.doc_disc_b64    = await fileToBase64(docDisc);
+
+    if (!APPS_SCRIPT_URL) {
+      // Demo mode: log and show success
+      console.log('📋 Datos del formulario (modo demo):', {
+        ...payload,
+        doc_id_b64: '[archivo adjunto]',
+        doc_disc_b64: '[archivo adjunto]'
+      });
+      await new Promise(r => setTimeout(r, 1500)); // simular envío
+      showSuccessScreen();
+      return;
+    }
+
+    // Send to Apps Script
+    const resp = await fetch(APPS_SCRIPT_URL, {
+      method: 'POST',
+      body: JSON.stringify(payload)
+    });
+    const result = await resp.json();
+
+    if (result.status === 'ok') {
+      showSuccessScreen();
+    } else {
+      throw new Error(result.message || 'Error del servidor');
+    }
+
+  } catch (err) {
+    console.error(err);
+    alert('Ocurrió un error al enviar: ' + err.message + '\n\nIntenta de nuevo o contacta al equipo de Talento Up.');
+    btn.classList.remove('loading'); btn.disabled = false;
+  }
+}
+
+function showSuccessScreen() {
+  document.querySelectorAll('.section').forEach(s => s.style.display = 'none');
+  document.querySelector('.submit-section').style.display = 'none';
+  document.getElementById('success-screen').classList.add('show');
+  document.getElementById('success-screen').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+/* ── REAL-TIME PROGRESS ── */
+document.querySelectorAll('input, select, textarea').forEach(el => {
+  el.addEventListener('input', updateProgress);
+  el.addEventListener('change', updateProgress);
+  // Live validation feedback
+  el.addEventListener('blur', () => {
+    if (el.value && el.validity) {
+      el.classList.toggle('valid', el.validity.valid);
+      el.classList.toggle('error', !el.validity.valid);
+    }
+  });
+});
+
+/* ── INIT ── */
+setupUpload('doc-id',   'prev-id',   'zone-id');
+setupUpload('doc-disc', 'prev-disc', 'zone-disc');
+updateProgress();
+</script>
+
+<!-- ═══════════ APPS SCRIPT — INSTRUCCIONES EN COMENTARIO ═══════════
+Para conectar este formulario a Google Drive, crea un nuevo proyecto
+en https://script.google.com y pega el siguiente código:
+
+────────────────────────────────────────────────────────────────────
+const FOLDER_ID = 'ID_DE_TU_CARPETA_EN_DRIVE'; // ← reemplaza esto
+
+function doPost(e) {
+  try {
+    const data = JSON.parse(e.postData.contents);
+    const folder = DriveApp.getFolderById(FOLDER_ID);
+
+    // Guardar archivos
+    const saveFile = (b64, nombre, tipo) => {
+      const bytes = Utilities.base64Decode(b64);
+      const blob  = Utilities.newBlob(bytes, tipo, nombre);
+      return folder.createFile(blob).getUrl();
+    };
+
+    const urlId   = saveFile(data.doc_id_b64,   data.doc_id_nombre,   data.doc_id_tipo);
+    const urlDisc = saveFile(data.doc_disc_b64, data.doc_disc_nombre, data.doc_disc_tipo);
+
+    // Guardar en Sheets
+    const ss = SpreadsheetApp.openById('ID_DE_TU_HOJA');
+    const sheet = ss.getSheetByName('Postulaciones') || ss.insertSheet('Postulaciones');
+    if (sheet.getLastRow() === 0) {
+      sheet.appendRow(['Fecha','Nombre','Tipo ID','Núm. ID','Teléfono','Email',
+        'Municipio','Dirección','Barrio','Contrato previo','Doc ID (link)','Cert. Discapacidad (link)']);
+    }
+    sheet.appendRow([
+      data.timestamp, data.nombre, data.tipo_id, data.num_id,
+      data.telefono, data.email, data.municipio, data.direccion,
+      data.barrio, data.contrato, urlId, urlDisc
+    ]);
+
+    return ContentService
+      .createTextOutput(JSON.stringify({ status: 'ok' }))
+      .setMimeType(ContentService.MimeType.JSON);
+
+  } catch(err) {
+    return ContentService
+      .createTextOutput(JSON.stringify({ status: 'error', message: err.message }))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+}
+────────────────────────────────────────────────────────────────────
+Luego: Implementar → Nueva implementación → Aplicación web
+Ejecutar como: Tú | Acceso: Cualquier persona → Implementar → Copiar URL
+════════════════════════════════════════════════════════════════════ -->
+</body>
+</html>
